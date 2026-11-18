@@ -26,7 +26,7 @@ cp .env.example .env
 npm run dev
 ```
 
-On PowerShell, copy the environment template with `Copy-Item .env.example .env`. Fill in `MONGODB_URI`, a long random `JWT_SECRET`, and optionally `OPENAI_API_KEY`. The Vite app runs on `http://localhost:5173`; the Express API runs on `http://localhost:4000`.
+On PowerShell, copy the environment template with `Copy-Item .env.example .env`. Replace `<db_password>` in `MONGODB_URI` with the MongoDB database user's actual password. Set a long random `JWT_SECRET`, and optionally `OPENAI_API_KEY`. Configure `CLOUDINARY_URL` on the server from the Cloudinary Console; keep it in the ignored `.env` file. The Vite app runs on `http://localhost:5173`; the Express API runs on `http://localhost:4000`.
 
 The first registration using the address configured in `ADMIN_EMAIL` receives the admin role. Set this value before creating the intended admin account. All other users receive the learner role; a client-supplied role is never trusted.
 
@@ -44,6 +44,7 @@ The first registration using the address configured in `ADMIN_EMAIL` receives th
 | POST/PATCH/DELETE | `/api/admin/topics` | Admin | Create, review, publish, edit, archive or delete topics |
 | POST | `/api/admin/topics/generate` | Admin + AI key | Generate an editable topic draft |
 | POST | `/api/admin/vocabulary` | Admin | Create vocabulary |
+| POST | `/api/admin/media` | Admin + Cloudinary | Upload a JPG, PNG, WebP, PDF, or MP4 (max 20 MB) to the `speakora/learning` Cloudinary folder |
 | GET/POST | `/api/admin/gate/questions` | Admin | Review question bank and create a question draft |
 | POST | `/api/admin/gate/questions/import` | Admin | Import up to 250 question objects from JSON as drafts |
 | PATCH/DELETE | `/api/admin/gate/questions/:id` | Admin | Publish, edit, archive, or delete a question |
@@ -54,7 +55,18 @@ Send the JWT as `Authorization: Bearer <token>`. All AI calls are made by the se
 
 ### API on Render
 
-Create a Web Service from this repository. Use `npm install && npm run build:server` as the build command and `npm start` as the start command. Configure `MONGODB_URI`, `JWT_SECRET`, `ADMIN_EMAIL`, `CLIENT_ORIGIN`, and (if wanted) `OPENAI_API_KEY` and `OPENAI_MODEL` in the Render environment. Restrict Atlas network access to the service's network policy where possible.
+### Deploy both services with Render
+
+The included [`render.yaml`](./render.yaml) defines a Node API and a Vite static site. In Render, choose **New → Blueprint**, connect this GitHub repository, and select the `render.yaml` Blueprint. Render prompts for each `sync: false` value. Put secret values in the Render Dashboard, never in the YAML or frontend build.
+
+For a manual deployment instead:
+
+1. Create a Render **Web Service** from the repository for the API. Set Build Command to `npm ci && npm run build:server` and Start Command to `npm start`. Set `MONGODB_URI` to the MongoDB URI with the real database password, `JWT_SECRET` to a generated random secret, `CLOUDINARY_URL` to the server-side Cloudinary URL, `CLOUDINARY_CLOUD_NAME=dc6yyzex4`, `ADMIN_EMAIL` to the admin account email, and `NODE_ENV=production`. Set `CLIENT_ORIGIN` after the frontend service has its Render URL. Add `OPENAI_API_KEY` only if AI features are needed. The service health check is `/api/health`.
+2. Create a Render **Static Site** from the same repository. Build Command: `npm ci && npm run build`. Publish Directory: `dist`. Set build-time `VITE_API_URL` to the API's full Render origin, such as `https://<your-api-service>.onrender.com` (no trailing slash). The frontend API client uses this origin for `/api/*` requests.
+3. Copy the static site's exact `https://...onrender.com` origin into the API's `CLIENT_ORIGIN`, save, and redeploy the API. Keep the static site's SPA rewrite to `/index.html` for client-side routes.
+4. In MongoDB Atlas, allow network access from Render as appropriate for your Atlas plan, then redeploy/check `/api/health` until it reports `database: connected`. In Cloudinary, use the API environment URL from the Console. Uploads are sent from the authenticated backend; the API secret is never put in Vite variables.
+
+Render Blueprints prompt for secret `sync: false` values and preserve those values across later Blueprint syncs. Keep the API origin in `VITE_API_URL` public; never put database passwords, JWT secrets, OpenAI keys, or Cloudinary API secrets in frontend `VITE_*` variables.
 
 ### Frontend on Vercel or Render Static Site
 

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, AudioLines, BookOpen, Bookmark, Check, ChevronDown, CircleHelp, Compass, Download, Flame, Languages, LayoutDashboard, Library, Mic, Moon, MoreHorizontal, Play, Search, Settings, ShieldCheck, Sparkles, Star, Target, Volume2, WandSparkles, X } from 'lucide-react';
 import GatePractice from './GatePractice';
+import { apiUrl } from './api';
 
 const lessons = [
   { icon: '✦', title: 'Daily conversations', tag: 'DAILY LIFE', time: '12 min', color: 'lavender', desc: 'The little moments that make you fluent' },
@@ -19,7 +20,7 @@ export default function App() {
   const practice = () => { setResult(true); };
   const startMic = () => { const Speech = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition; if (!Speech) return notify('Voice input is supported in Chrome and Edge.'); const recognition = new Speech(); recognition.lang = 'hi-IN'; recognition.onresult = (e: any) => setSentence(e.results[0][0].transcript); recognition.start(); notify('Listening… say what you want to express.'); };
   const nav = [{ icon: LayoutDashboard, label: 'Overview' }, { icon: Compass, label: 'Explore learning' }, { icon: BookOpen, label: 'Vocabulary' }, { icon: AudioLines, label: 'Speaking practice' }, { icon: Library, label: 'My learning' },{icon:Target,label:'GATE Practice'}];
-  const authSubmit=async(e:React.FormEvent)=>{e.preventDefault();setAuthLoading(true);setAuthError('');try{const r=await fetch(`/api/auth/${registerMode?'register':'login'}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(registerMode?{name:authName,email:authEmail,password:authPassword}:{email:authEmail,password:authPassword})});const d=await r.json();if(!r.ok)throw new Error(d.error||'Sign in failed');localStorage.setItem('speakora-token',d.token);localStorage.setItem('speakora-role',d.user.role);setToken(d.token);setRole(d.user.role);setAuthOpen(false);notify(`Signed in as ${d.user.role}.`)}catch(e:any){setAuthError(e.message||'Could not connect to the API.')}finally{setAuthLoading(false)}};
+  const authSubmit=async(e:React.FormEvent)=>{e.preventDefault();setAuthLoading(true);setAuthError('');try{const r=await fetch(apiUrl(`/api/auth/${registerMode?'register':'login'}`),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(registerMode?{name:authName,email:authEmail,password:authPassword}:{email:authEmail,password:authPassword})});const d=await r.json();if(!r.ok)throw new Error(d.error||'Sign in failed');localStorage.setItem('speakora-token',d.token);localStorage.setItem('speakora-role',d.user.role);setToken(d.token);setRole(d.user.role);setAuthOpen(false);notify(`Signed in as ${d.user.role}.`)}catch(e:any){setAuthError(e.message||'Could not connect to the API.')}finally{setAuthLoading(false)}};
   const filter = (value: string) => setActive(value);
   return <div className="app-shell">
     <aside className="sidebar">
