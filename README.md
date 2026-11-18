@@ -10,7 +10,7 @@ Speakora helps Hindi speakers express their own thoughts in natural English. Thi
 - JWT registration and login, bcrypt password hashing, profile preferences, admin authorization, request validation, rate limiting, Helmet, and CORS.
 - MongoDB models and paginated APIs for topics and vocabulary; learner saved-word and practice-history endpoints.
 - AI sentence coaching (including vocabulary suggestions), generated speaking prompts/corrections, and admin lesson/vocabulary drafts through a server-only OpenRouter adapter. `OPENROUTER_API_KEY` is preferred; `OPENAI_API_KEY` remains a fallback. The key is never sent to the browser.
-- Draft/review/published topic workflow and admin topic CRUD. Only published topics and vocabulary are returned from learner endpoints.
+- Draft/review/published topic workflow and admin topic CRUD. Only published topics, vocabulary, and learning media are returned from learner endpoints. Admin media uploads are linked to MongoDB and can sync earlier Cloudinary uploads into the learner library.
 - GATE practice area with 2009–2026 year selection, 30 current paper choices, shared General Aptitude filtering, MCQ/MSQ/NAT metadata, paginated verified questions, answer/solution reveal, and an admin question editor with draft review, publish/delete, and JSON batch import.
 
 The dashboard contains presentational learning examples while the API is being configured. AI-generated results, saved content, and personalized progress are served by the API and are not silently simulated. Media uploads, password recovery email, generated PDF exports, and hosted avatar/video generation still need deployment credentials and provider services before they can be enabled.
@@ -38,13 +38,15 @@ Only the account whose email exactly matches `ADMIN_EMAIL` receives the admin ro
 | POST | `/api/auth/register`, `/api/auth/login` | Public | Create account / issue token |
 | GET | `/api/auth/me`, `/api/progress` | Signed in | Current user and practice summary |
 | PATCH | `/api/profile` | Signed in | Update name, interests, avatar preference |
-| GET | `/api/topics`, `/api/vocabulary`, `/api/gate/questions` | Public | Paginated published content and GATE questions |
+| GET | `/api/topics`, `/api/vocabulary`, `/api/media`, `/api/gate/questions` | Public | Paginated published content, media, and GATE questions |
 | GET | `/api/gate/questions/:id/solution` | Public | Verified answer and worked solution for a published question |
 | POST | `/api/learn/sentence` | Signed in + AI key | Hindi/English sentence coaching |
 | POST | `/api/learn/speaking-prompt`, `/api/learn/correct` | Signed in + AI key | Speaking practice |
 | POST/PATCH/DELETE | `/api/admin/topics` | Admin | Create, review, publish, edit, archive or delete topics |
 | POST | `/api/admin/topics/generate` | Admin + AI key | Generate an editable topic draft |
 | POST | `/api/admin/vocabulary` | Admin | Create vocabulary |
+| GET/POST/PATCH/DELETE | `/api/admin/media` | Admin | Manage learner media metadata and publish status |
+| POST | `/api/admin/media/sync` | Admin + Cloudinary | Link existing uploads from the `speakora/learning` Cloudinary folder to the learner library |
 | POST | `/api/admin/media` | Admin + Cloudinary | Upload a JPG, PNG, WebP, PDF, or MP4 (max 20 MB) to the `speakora/learning` Cloudinary folder |
 | GET/POST | `/api/admin/gate/questions` | Admin | Review question bank and create a question draft |
 | POST | `/api/admin/gate/questions/import` | Admin | Import up to 250 question objects from JSON as drafts |
