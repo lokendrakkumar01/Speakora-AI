@@ -1,0 +1,1065 @@
+[
+  {
+    "word": "Ability",
+    "category": "Personal Development",
+    "meaningHindi": "क्षमता; किसी काम को करने की योग्यता",
+    "definition": "the skill or power to do something",
+    "pronunciation": "uh-BIL-uh-tee",
+    "example": "She has the ability to explain difficult topics clearly.",
+    "similarWords": [
+      "skill",
+      "capability"
+    ],
+    "oppositeWords": [
+      "inability"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Achieve",
+    "category": "Personal Development",
+    "meaningHindi": "हासिल करना; प्राप्त करना",
+    "definition": "to succeed in doing or getting something",
+    "pronunciation": "uh-CHEEV",
+    "example": "You can achieve your goals with regular practice.",
+    "similarWords": [
+      "accomplish",
+      "attain"
+    ],
+    "oppositeWords": [
+      "fail"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Adapt",
+    "category": "Personal Development",
+    "meaningHindi": "अनुकूल होना; परिस्थिति के अनुसार बदलना",
+    "definition": "to adjust to a new situation",
+    "pronunciation": "uh-DAPT",
+    "example": "Students must adapt to new learning methods.",
+    "similarWords": [
+      "adjust",
+      "modify"
+    ],
+    "oppositeWords": [
+      "resist"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Advantage",
+    "category": "Daily Conversation",
+    "meaningHindi": "लाभ; फायदा",
+    "definition": "something that makes a situation better for you",
+    "pronunciation": "ad-VAN-tij",
+    "example": "Speaking English gives you an advantage in interviews.",
+    "similarWords": [
+      "benefit",
+      "plus"
+    ],
+    "oppositeWords": [
+      "disadvantage"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Advice",
+    "category": "Daily Conversation",
+    "meaningHindi": "सलाह",
+    "definition": "a helpful suggestion about what someone should do",
+    "pronunciation": "ad-VICE",
+    "example": "My teacher gave me useful advice before the interview.",
+    "similarWords": [
+      "guidance",
+      "suggestion"
+    ],
+    "oppositeWords": [],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Appreciate",
+    "category": "Communication",
+    "meaningHindi": "सराहना करना; आभारी होना",
+    "definition": "to recognize the value of something or feel thankful",
+    "pronunciation": "uh-PREE-shee-ayt",
+    "example": "I appreciate your help with this project.",
+    "similarWords": [
+      "value",
+      "acknowledge"
+    ],
+    "oppositeWords": [
+      "ignore"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Approach",
+    "category": "Education",
+    "meaningHindi": "तरीका; दृष्टिकोण",
+    "definition": "a way of dealing with a task or problem",
+    "pronunciation": "uh-PROHCH",
+    "example": "Let us try a different approach to solve this question.",
+    "similarWords": [
+      "method",
+      "strategy"
+    ],
+    "oppositeWords": [],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Arrange",
+    "category": "Daily Conversation",
+    "meaningHindi": "व्यवस्थित करना; इंतजाम करना",
+    "definition": "to put things in order or make plans",
+    "pronunciation": "uh-RAYNJ",
+    "example": "I will arrange a meeting with my project team.",
+    "similarWords": [
+      "organize",
+      "prepare"
+    ],
+    "oppositeWords": [
+      "disorganize"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Attempt",
+    "category": "Education",
+    "meaningHindi": "प्रयास करना; कोशिश",
+    "definition": "an effort to do something",
+    "pronunciation": "uh-TEMPT",
+    "example": "I made an attempt to answer every question.",
+    "similarWords": [
+      "try",
+      "effort"
+    ],
+    "oppositeWords": [],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Avoid",
+    "category": "Communication",
+    "meaningHindi": "बचना; टालना",
+    "definition": "to stay away from something",
+    "pronunciation": "uh-VOID",
+    "example": "Avoid using very long sentences in a short answer.",
+    "similarWords": [
+      "prevent",
+      "evade"
+    ],
+    "oppositeWords": [
+      "face"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Aware",
+    "category": "Daily Conversation",
+    "meaningHindi": "जानकार; सचेत",
+    "definition": "knowing or understanding a situation",
+    "pronunciation": "uh-WAIR",
+    "example": "I am aware of the importance of time management.",
+    "similarWords": [
+      "conscious",
+      "informed"
+    ],
+    "oppositeWords": [
+      "unaware"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Benefit",
+    "category": "Education",
+    "meaningHindi": "लाभ; फायदा",
+    "definition": "a good result or helpful effect",
+    "pronunciation": "BEN-uh-fit",
+    "example": "Daily reading has many benefits.",
+    "similarWords": [
+      "advantage",
+      "gain"
+    ],
+    "oppositeWords": [
+      "drawback"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Challenge",
+    "category": "Personal Development",
+    "meaningHindi": "चुनौती",
+    "definition": "a difficult task that tests your ability",
+    "pronunciation": "CHAL-inj",
+    "example": "Learning a new programming language is a challenge.",
+    "similarWords": [
+      "difficulty",
+      "test"
+    ],
+    "oppositeWords": [
+      "ease"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Clarify",
+    "category": "Communication",
+    "meaningHindi": "स्पष्ट करना",
+    "definition": "to make something easier to understand",
+    "pronunciation": "KLAR-uh-fy",
+    "example": "Could you clarify the second point, please?",
+    "similarWords": [
+      "explain",
+      "make clear"
+    ],
+    "oppositeWords": [
+      "confuse"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Collaborate",
+    "category": "Workplace",
+    "meaningHindi": "मिलकर काम करना",
+    "definition": "to work together with other people",
+    "pronunciation": "kuh-LAB-uh-rayt",
+    "example": "We collaborate to complete the college project.",
+    "similarWords": [
+      "cooperate",
+      "team up"
+    ],
+    "oppositeWords": [
+      "compete"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Communicate",
+    "category": "Communication",
+    "meaningHindi": "बातचीत या जानकारी साझा करना",
+    "definition": "to share information, thoughts, or feelings",
+    "pronunciation": "kuh-MYOO-ni-kayt",
+    "example": "Good leaders communicate clearly with their teams.",
+    "similarWords": [
+      "convey",
+      "express"
+    ],
+    "oppositeWords": [
+      "conceal"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Confident",
+    "category": "Personal Development",
+    "meaningHindi": "आत्मविश्वासी",
+    "definition": "feeling sure about your abilities",
+    "pronunciation": "KON-fi-dent",
+    "example": "I feel more confident after daily speaking practice.",
+    "similarWords": [
+      "self-assured",
+      "certain"
+    ],
+    "oppositeWords": [
+      "nervous",
+      "doubtful"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Consider",
+    "category": "Communication",
+    "meaningHindi": "विचार करना",
+    "definition": "to think carefully about something",
+    "pronunciation": "kuhn-SID-er",
+    "example": "Please consider all the options before deciding.",
+    "similarWords": [
+      "think about",
+      "review"
+    ],
+    "oppositeWords": [
+      "ignore"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Consistent",
+    "category": "Personal Development",
+    "meaningHindi": "नियमित; लगातार एक जैसा",
+    "definition": "doing something in the same way over time",
+    "pronunciation": "kuhn-SIS-tent",
+    "example": "Consistent practice improves fluency.",
+    "similarWords": [
+      "steady",
+      "regular"
+    ],
+    "oppositeWords": [
+      "irregular"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Contribute",
+    "category": "Workplace",
+    "meaningHindi": "योगदान देना",
+    "definition": "to give something to help achieve a result",
+    "pronunciation": "kuhn-TRIB-yoot",
+    "example": "Every team member should contribute ideas.",
+    "similarWords": [
+      "give",
+      "add"
+    ],
+    "oppositeWords": [
+      "withhold"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Create",
+    "category": "Technology",
+    "meaningHindi": "बनाना; रचना करना",
+    "definition": "to make something new",
+    "pronunciation": "kree-AYT",
+    "example": "I want to create a useful learning application.",
+    "similarWords": [
+      "make",
+      "develop"
+    ],
+    "oppositeWords": [
+      "destroy"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Curious",
+    "category": "Education",
+    "meaningHindi": "जिज्ञासु; जानने की इच्छा रखने वाला",
+    "definition": "eager to know or learn something",
+    "pronunciation": "KYOOR-ee-us",
+    "example": "I am curious about how artificial intelligence works.",
+    "similarWords": [
+      "interested",
+      "inquisitive"
+    ],
+    "oppositeWords": [
+      "uninterested"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Decision",
+    "category": "Daily Conversation",
+    "meaningHindi": "निर्णय",
+    "definition": "a choice made after thinking",
+    "pronunciation": "di-SIZH-un",
+    "example": "It was a difficult decision, but I learned from it.",
+    "similarWords": [
+      "choice",
+      "judgment"
+    ],
+    "oppositeWords": [
+      "indecision"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Dedicated",
+    "category": "Personal Development",
+    "meaningHindi": "समर्पित; निष्ठावान",
+    "definition": "giving time and effort to a purpose",
+    "pronunciation": "DED-ih-kay-tid",
+    "example": "She is dedicated to improving her communication skills.",
+    "similarWords": [
+      "committed",
+      "devoted"
+    ],
+    "oppositeWords": [
+      "careless"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Dependable",
+    "category": "Workplace",
+    "meaningHindi": "भरोसेमंद",
+    "definition": "able to be trusted or relied on",
+    "pronunciation": "di-PEN-duh-bul",
+    "example": "A dependable teammate completes tasks on time.",
+    "similarWords": [
+      "reliable",
+      "trustworthy"
+    ],
+    "oppositeWords": [
+      "unreliable"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Describe",
+    "category": "Communication",
+    "meaningHindi": "वर्णन करना",
+    "definition": "to say or write what someone or something is like",
+    "pronunciation": "di-SKRYB",
+    "example": "Describe your final-year project in simple words.",
+    "similarWords": [
+      "explain",
+      "depict"
+    ],
+    "oppositeWords": [],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Develop",
+    "category": "Education",
+    "meaningHindi": "विकसित करना",
+    "definition": "to grow or improve something over time",
+    "pronunciation": "di-VEL-up",
+    "example": "I want to develop strong problem-solving skills.",
+    "similarWords": [
+      "improve",
+      "build"
+    ],
+    "oppositeWords": [
+      "neglect"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Effective",
+    "category": "Workplace",
+    "meaningHindi": "प्रभावी",
+    "definition": "producing the result that is wanted",
+    "pronunciation": "ih-FEK-tiv",
+    "example": "A short daily routine can be very effective.",
+    "similarWords": [
+      "successful",
+      "useful"
+    ],
+    "oppositeWords": [
+      "ineffective"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Efficient",
+    "category": "Workplace",
+    "meaningHindi": "कुशल; कम समय और संसाधन में काम करने वाला",
+    "definition": "working well without wasting time or resources",
+    "pronunciation": "ih-FISH-unt",
+    "example": "We need an efficient way to manage our study schedule.",
+    "similarWords": [
+      "productive",
+      "capable"
+    ],
+    "oppositeWords": [
+      "inefficient"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Encourage",
+    "category": "Communication",
+    "meaningHindi": "प्रोत्साहित करना",
+    "definition": "to give someone support or confidence",
+    "pronunciation": "en-KUR-ij",
+    "example": "My friends encourage me to speak English every day.",
+    "similarWords": [
+      "motivate",
+      "support"
+    ],
+    "oppositeWords": [
+      "discourage"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Environment",
+    "category": "Education",
+    "meaningHindi": "पर्यावरण; माहौल",
+    "definition": "the surroundings or conditions in which someone works or lives",
+    "pronunciation": "en-VY-run-ment",
+    "example": "A positive learning environment helps students grow.",
+    "similarWords": [
+      "surroundings",
+      "setting"
+    ],
+    "oppositeWords": [],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Evaluate",
+    "category": "Workplace",
+    "meaningHindi": "मूल्यांकन करना",
+    "definition": "to judge the quality or value of something",
+    "pronunciation": "ih-VAL-yoo-ayt",
+    "example": "The interviewer will evaluate your problem-solving skills.",
+    "similarWords": [
+      "assess",
+      "measure"
+    ],
+    "oppositeWords": [
+      "neglect"
+    ],
+    "difficulty": "advanced",
+    "status": "draft"
+  },
+  {
+    "word": "Explain",
+    "category": "Communication",
+    "meaningHindi": "समझाना",
+    "definition": "to make an idea or situation clear",
+    "pronunciation": "ik-SPLAYN",
+    "example": "Can you explain this concept with an example?",
+    "similarWords": [
+      "clarify",
+      "describe"
+    ],
+    "oppositeWords": [
+      "confuse"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Flexible",
+    "category": "Workplace",
+    "meaningHindi": "लचीला; परिस्थितियों के अनुसार बदल सकने वाला",
+    "definition": "able to change or adjust easily",
+    "pronunciation": "FLEK-suh-bul",
+    "example": "A flexible plan helps when your schedule changes.",
+    "similarWords": [
+      "adaptable",
+      "adjustable"
+    ],
+    "oppositeWords": [
+      "rigid"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Focus",
+    "category": "Education",
+    "meaningHindi": "ध्यान केंद्रित करना",
+    "definition": "to give attention to one particular thing",
+    "pronunciation": "FOH-kus",
+    "example": "I focus on one topic at a time while studying.",
+    "similarWords": [
+      "concentrate",
+      "attend"
+    ],
+    "oppositeWords": [
+      "distract"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Improve",
+    "category": "Personal Development",
+    "meaningHindi": "सुधारना; बेहतर बनाना",
+    "definition": "to make or become better",
+    "pronunciation": "im-PROOV",
+    "example": "I practise speaking to improve my fluency.",
+    "similarWords": [
+      "enhance",
+      "upgrade"
+    ],
+    "oppositeWords": [
+      "worsen"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Independent",
+    "category": "Personal Development",
+    "meaningHindi": "स्वतंत्र; आत्मनिर्भर",
+    "definition": "able to do things without help from others",
+    "pronunciation": "in-di-PEN-dent",
+    "example": "I am learning to work independently.",
+    "similarWords": [
+      "self-reliant",
+      "autonomous"
+    ],
+    "oppositeWords": [
+      "dependent"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Initiative",
+    "category": "Workplace",
+    "meaningHindi": "पहल; स्वयं शुरुआत करने की क्षमता",
+    "definition": "the ability to act or start something without being told",
+    "pronunciation": "ih-NISH-uh-tiv",
+    "example": "Taking initiative can make you a stronger team member.",
+    "similarWords": [
+      "drive",
+      "enterprise"
+    ],
+    "oppositeWords": [
+      "passivity"
+    ],
+    "difficulty": "advanced",
+    "status": "draft"
+  },
+  {
+    "word": "Knowledge",
+    "category": "Education",
+    "meaningHindi": "ज्ञान; जानकारी",
+    "definition": "information and understanding gained through learning",
+    "pronunciation": "NOL-ij",
+    "example": "Practical knowledge is important in software development.",
+    "similarWords": [
+      "understanding",
+      "expertise"
+    ],
+    "oppositeWords": [
+      "ignorance"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Maintain",
+    "category": "Daily Conversation",
+    "meaningHindi": "बनाए रखना",
+    "definition": "to keep something at the same level or in good condition",
+    "pronunciation": "mayn-TAYN",
+    "example": "It is important to maintain a balance between study and rest.",
+    "similarWords": [
+      "preserve",
+      "keep"
+    ],
+    "oppositeWords": [
+      "neglect"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Manage",
+    "category": "Workplace",
+    "meaningHindi": "प्रबंधन करना; संभालना",
+    "definition": "to control or organize something successfully",
+    "pronunciation": "MAN-ij",
+    "example": "I manage my time by preparing a daily schedule.",
+    "similarWords": [
+      "handle",
+      "organize"
+    ],
+    "oppositeWords": [
+      "mismanage"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Motivate",
+    "category": "Personal Development",
+    "meaningHindi": "प्रेरित करना",
+    "definition": "to make someone want to do something",
+    "pronunciation": "MOH-tuh-vayt",
+    "example": "Small achievements motivate me to keep learning.",
+    "similarWords": [
+      "inspire",
+      "encourage"
+    ],
+    "oppositeWords": [
+      "discourage"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Necessary",
+    "category": "Education",
+    "meaningHindi": "आवश्यक; जरूरी",
+    "definition": "needed for a particular purpose",
+    "pronunciation": "NES-uh-ser-ee",
+    "example": "Regular revision is necessary before an exam.",
+    "similarWords": [
+      "essential",
+      "required"
+    ],
+    "oppositeWords": [
+      "unnecessary"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Opportunity",
+    "category": "Career",
+    "meaningHindi": "अवसर; मौका",
+    "definition": "a situation in which it is possible to do something",
+    "pronunciation": "op-er-TOO-nuh-tee",
+    "example": "This internship is a good opportunity to gain experience.",
+    "similarWords": [
+      "chance",
+      "opening"
+    ],
+    "oppositeWords": [
+      "obstacle"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Organize",
+    "category": "Workplace",
+    "meaningHindi": "व्यवस्थित करना",
+    "definition": "to arrange things in a planned way",
+    "pronunciation": "OR-guh-nyz",
+    "example": "I organize my tasks before starting work.",
+    "similarWords": [
+      "arrange",
+      "coordinate"
+    ],
+    "oppositeWords": [
+      "disorganize"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Patient",
+    "category": "Personal Development",
+    "meaningHindi": "धैर्यवान",
+    "definition": "able to stay calm while waiting or facing difficulty",
+    "pronunciation": "PAY-shunt",
+    "example": "Be patient while learning a difficult topic.",
+    "similarWords": [
+      "calm",
+      "tolerant"
+    ],
+    "oppositeWords": [
+      "impatient"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Perform",
+    "category": "Workplace",
+    "meaningHindi": "कार्य करना; प्रदर्शन करना",
+    "definition": "to do a task or activity",
+    "pronunciation": "per-FORM",
+    "example": "I perform better when I practise regularly.",
+    "similarWords": [
+      "execute",
+      "carry out"
+    ],
+    "oppositeWords": [
+      "fail"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Priority",
+    "category": "Education",
+    "meaningHindi": "प्राथमिकता",
+    "definition": "something that is more important than other things",
+    "pronunciation": "pry-OR-uh-tee",
+    "example": "My first priority is to prepare well for the examination.",
+    "similarWords": [
+      "precedence",
+      "importance"
+    ],
+    "oppositeWords": [
+      "triviality"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Progress",
+    "category": "Personal Development",
+    "meaningHindi": "प्रगति",
+    "definition": "movement towards a goal or a better situation",
+    "pronunciation": "PROH-gres",
+    "example": "I can see progress in my speaking skills.",
+    "similarWords": [
+      "improvement",
+      "development"
+    ],
+    "oppositeWords": [
+      "decline"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Reliable",
+    "category": "Technology",
+    "meaningHindi": "विश्वसनीय; भरोसेमंद",
+    "definition": "able to be trusted to do what is expected",
+    "pronunciation": "ri-LY-uh-bul",
+    "example": "A reliable internet connection is important for online classes.",
+    "similarWords": [
+      "dependable",
+      "trustworthy"
+    ],
+    "oppositeWords": [
+      "unreliable"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Resolve",
+    "category": "Technology",
+    "meaningHindi": "हल करना; समाधान निकालना",
+    "definition": "to find a solution to a problem",
+    "pronunciation": "ri-ZOLV",
+    "example": "We need to resolve this issue before deployment.",
+    "similarWords": [
+      "solve",
+      "settle"
+    ],
+    "oppositeWords": [
+      "complicate"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Responsible",
+    "category": "Workplace",
+    "meaningHindi": "जिम्मेदार",
+    "definition": "having a duty to deal with something",
+    "pronunciation": "ri-SPON-suh-bul",
+    "example": "I am responsible for coordinating the event.",
+    "similarWords": [
+      "accountable",
+      "dependable"
+    ],
+    "oppositeWords": [
+      "irresponsible"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Schedule",
+    "category": "Education",
+    "meaningHindi": "समय-सारणी; निर्धारित करना",
+    "definition": "a plan that lists when activities will happen",
+    "pronunciation": "SKEJ-ool",
+    "example": "I follow a study schedule during the week.",
+    "similarWords": [
+      "timetable",
+      "plan"
+    ],
+    "oppositeWords": [],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Solution",
+    "category": "Technology",
+    "meaningHindi": "समाधान",
+    "definition": "an answer to a problem",
+    "pronunciation": "suh-LOO-shun",
+    "example": "We discussed a simple solution to the technical problem.",
+    "similarWords": [
+      "answer",
+      "resolution"
+    ],
+    "oppositeWords": [
+      "problem"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Specific",
+    "category": "Communication",
+    "meaningHindi": "विशिष्ट; स्पष्ट रूप से तय",
+    "definition": "clearly defined or identified",
+    "pronunciation": "spuh-SIF-ik",
+    "example": "Please give one specific example from your project.",
+    "similarWords": [
+      "particular",
+      "precise"
+    ],
+    "oppositeWords": [
+      "general",
+      "vague"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Support",
+    "category": "Communication",
+    "meaningHindi": "सहायता करना; समर्थन",
+    "definition": "to help or encourage someone",
+    "pronunciation": "suh-PORT",
+    "example": "My classmates support each other during exam preparation.",
+    "similarWords": [
+      "assist",
+      "help"
+    ],
+    "oppositeWords": [
+      "oppose"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Teamwork",
+    "category": "Workplace",
+    "meaningHindi": "टीम में मिलकर काम करना",
+    "definition": "the activity of working well with others",
+    "pronunciation": "TEEM-wurk",
+    "example": "Teamwork is essential for completing group projects.",
+    "similarWords": [
+      "cooperation",
+      "collaboration"
+    ],
+    "oppositeWords": [
+      "individualism"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Unique",
+    "category": "Communication",
+    "meaningHindi": "अद्वितीय; सबसे अलग",
+    "definition": "being the only one of its kind",
+    "pronunciation": "yoo-NEEK",
+    "example": "Our application has a unique feature for learners.",
+    "similarWords": [
+      "distinct",
+      "special"
+    ],
+    "oppositeWords": [
+      "common",
+      "ordinary"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Update",
+    "category": "Technology",
+    "meaningHindi": "अद्यतन करना; नई जानकारी देना",
+    "definition": "to make something more current or provide new information",
+    "pronunciation": "up-DAYT",
+    "example": "Please update the project documentation after the change.",
+    "similarWords": [
+      "revise",
+      "refresh"
+    ],
+    "oppositeWords": [
+      "outdate"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Valid",
+    "category": "Technology",
+    "meaningHindi": "मान्य; तर्कसंगत",
+    "definition": "acceptable or based on good reasons",
+    "pronunciation": "VAL-id",
+    "example": "Make sure the email address is valid before submitting the form.",
+    "similarWords": [
+      "acceptable",
+      "legitimate"
+    ],
+    "oppositeWords": [
+      "invalid"
+    ],
+    "difficulty": "intermediate",
+    "status": "draft"
+  },
+  {
+    "word": "Value",
+    "category": "Daily Conversation",
+    "meaningHindi": "महत्व; मूल्य",
+    "definition": "the importance or usefulness of something",
+    "pronunciation": "VAL-yoo",
+    "example": "This project adds value to the learning experience.",
+    "similarWords": [
+      "worth",
+      "importance"
+    ],
+    "oppositeWords": [
+      "worthlessness"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Willing",
+    "category": "Career",
+    "meaningHindi": "इच्छुक; तैयार",
+    "definition": "ready or happy to do something",
+    "pronunciation": "WIL-ing",
+    "example": "I am willing to learn new tools and technologies.",
+    "similarWords": [
+      "ready",
+      "prepared"
+    ],
+    "oppositeWords": [
+      "unwilling"
+    ],
+    "difficulty": "beginner",
+    "status": "draft"
+  },
+  {
+    "word": "Wisdom",
+    "category": "Personal Development",
+    "meaningHindi": "बुद्धिमत्ता; समझदारी",
+    "definition": "the ability to make good decisions using knowledge and experience",
+    "pronunciation": "WIZ-dum",
+    "example": "Experience often helps people develop wisdom.",
+    "similarWords": [
+      "good judgment",
+      "insight"
+    ],
+    "oppositeWords": [
+      "foolishness"
+    ],
+    "difficulty": "advanced",
+    "status": "draft"
+  }
+]
+

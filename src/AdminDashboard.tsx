@@ -20,7 +20,7 @@ async function requestJson(path: string, init: RequestInit = {}) {
     throw new Error(`The API returned a webpage instead of JSON (${response.status}). Set VITE_API_URL in the frontend service to your backend's Render URL, then redeploy the frontend.`);
   }
   const data = await response.json();
-  if (!response.ok) throw new Error(data.error || `Request failed (${response.status}).`);
+  if (!response.ok) { const fieldErrors=Object.entries(data.details?.fieldErrors||{}).flatMap(([field,messages]:[string,any])=>(Array.isArray(messages)?messages:[]).map(message=>`${field}: ${message}`)); throw new Error([data.error||`Request failed (${response.status}).`,...fieldErrors.slice(0,4)].join(' ')); }
   return data;
 }
 
@@ -97,11 +97,21 @@ export default function AdminDashboard({ token, notify, onOpenGate }: { token: s
     try {
       const parsed = JSON.parse(importText);
       if (!Array.isArray(parsed) || parsed.length < 1 || parsed.length > 250) throw new Error('Paste a JSON array containing 1–250 items.');
-      for (const [index, item] of parsed.entries()) {
-        try { await requestJson(endpoint, { method: 'POST', headers, body: JSON.stringify(item) }); }
-        catch (error: any) { throw new Error(`Imported ${index} of ${parsed.length} items. Item ${index + 1}: ${error.message}`); }
+      if(!parsed.every(item=>item&&typeof item==='object'&&!Array.isArray(item)))throw new Error('Every JSON array entry must be an object.');
+      const looksLikeVocabulary=parsed.every(item=>typeof item.word==='string'&&('meaning' in item||'meaningHindi' in item||'definition' in item));
+      const importSection=looksLikeVocabulary?'vocabulary':section;
+      const importEndpoint=importSection==='lessons'?'/api/admin/topics':importSection==='vocabulary'?'/api/admin/vocabulary':'/api/admin/practice-prompts';
+      let records=parsed;
+      if(looksLikeVocabulary){records=parsed.map(item=>{const rawMeaning=String(item.meaningHindi??item.meaning??'').trim();const parts=rawMeaning.split(/\s+[—–]\s+/,2);return{word:String(item.word).trim(),category:String(item.category||'General Vocabulary').trim(),meaningHindi:String(item.meaningHindi??parts[0]??'').trim(),definition:String(item.definition??parts[1]??(item.meaningHindi?'':rawMeaning)).trim(),pronunciation:String(item.pronunciation||''),example:String(item.example||''),similarWords:Array.isArray(item.similarWords)?item.similarWords:Array.isArray(item.synonyms)?item.synonyms:[],oppositeWords:Array.isArray(item.oppositeWords)?item.oppositeWords:Array.isArray(item.antonyms)?item.antonyms:[],difficulty:String(item.difficulty||'beginner').toLowerCase(),status:String(item.status||'draft').toLowerCase()}});
+        const existingData=await requestJson('/api/admin/vocabulary',{headers:{Authorization:`Bearer ${token}`}});const known=new Set((existingData.items||[]).map((item:any)=>String(item.word||'').trim().toLocaleLowerCase()));const batchSeen=new Set<string>();const before=records.length;records=records.filter(item=>{const key=String(item.word).toLocaleLowerCase();if(known.has(key)||batchSeen.has(key))return false;batchSeen.add(key);return true});const skipped=before-records.length;if(skipped)notify(`Skipping ${skipped} vocabulary word(s) already in the bank.`);
       }
-      setImportText(''); setShowImport(false); notify(`${parsed.length} items imported as provided.`); await load();
+      for (const [index, item] of records.entries()) {
+        try { await requestJson(importEndpoint, { method: 'POST', headers, body: JSON.stringify(item) }); }
+        catch (error: any) { throw new Error(`Imported ${index} of ${records.length} new item(s). Item ${index + 1} (${item.word||item.title||item.topic||'unnamed'}): ${error.message}`); }
+      }
+      if(importSection!==section)setSection(importSection);
+      if(looksLikeVocabulary){const d=await requestJson(importEndpoint,{headers:{Authorization:`Bearer ${token}`}});setItems(d.items||[])}else await load();
+      setImportText(''); setShowImport(false); notify(records.length?`${records.length} ${importSection==='vocabulary'?'vocabulary word(s)':importSection==='speaking'?'speaking prompt(s)':'lesson(s)'} imported.`:'All submitted vocabulary words were already present.');
     } catch (error: any) { setError(error.message || 'Import failed.'); }
     finally { setImporting(false); }
   };
