@@ -14,7 +14,7 @@
       "inability"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Achieve",
@@ -31,7 +31,7 @@
       "fail"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Adapt",
@@ -48,7 +48,7 @@
       "resist"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Advantage",
@@ -65,7 +65,7 @@
       "disadvantage"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Advice",
@@ -80,7 +80,7 @@
     ],
     "oppositeWords": [],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Appreciate",
@@ -97,7 +97,7 @@
       "ignore"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Approach",
@@ -112,7 +112,7 @@
     ],
     "oppositeWords": [],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Arrange",
@@ -129,7 +129,7 @@
       "disorganize"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Attempt",
@@ -144,7 +144,7 @@
     ],
     "oppositeWords": [],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Avoid",
@@ -161,7 +161,7 @@
       "face"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Aware",
@@ -178,7 +178,7 @@
       "unaware"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Benefit",
@@ -195,7 +195,7 @@
       "drawback"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Challenge",
@@ -212,7 +212,7 @@
       "ease"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Clarify",
@@ -229,7 +229,7 @@
       "confuse"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Collaborate",
@@ -246,7 +246,7 @@
       "compete"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Communicate",
@@ -263,7 +263,7 @@
       "conceal"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Confident",
@@ -281,7 +281,7 @@
       "doubtful"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Consider",
@@ -298,7 +298,7 @@
       "ignore"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Consistent",
@@ -315,7 +315,7 @@
       "irregular"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Contribute",
@@ -332,7 +332,7 @@
       "withhold"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Create",
@@ -349,7 +349,7 @@
       "destroy"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Curious",
@@ -366,7 +366,7 @@
       "uninterested"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Decision",
@@ -383,7 +383,7 @@
       "indecision"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Dedicated",
@@ -400,7 +400,7 @@
       "careless"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Dependable",
@@ -417,7 +417,7 @@
       "unreliable"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Describe",
@@ -432,7 +432,7 @@
     ],
     "oppositeWords": [],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Develop",
@@ -449,7 +449,7 @@
       "neglect"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Effective",
@@ -466,7 +466,7 @@
       "ineffective"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Efficient",
@@ -483,7 +483,7 @@
       "inefficient"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Encourage",
@@ -500,7 +500,7 @@
       "discourage"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Environment",
@@ -515,7 +515,7 @@
     ],
     "oppositeWords": [],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Evaluate",
@@ -532,7 +532,7 @@
       "neglect"
     ],
     "difficulty": "advanced",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Explain",
@@ -549,7 +549,7 @@
       "confuse"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Flexible",
@@ -566,7 +566,7 @@
       "rigid"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Focus",
@@ -583,7 +583,7 @@
       "distract"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Improve",
@@ -600,7 +600,7 @@
       "worsen"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Independent",
@@ -617,7 +617,7 @@
       "dependent"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Initiative",
@@ -634,7 +634,7 @@
       "passivity"
     ],
     "difficulty": "advanced",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Knowledge",
@@ -651,7 +651,7 @@
       "ignorance"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Maintain",
@@ -668,7 +668,7 @@
       "neglect"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Manage",
@@ -685,7 +685,7 @@
       "mismanage"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Motivate",
@@ -702,7 +702,7 @@
       "discourage"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Necessary",
@@ -719,7 +719,7 @@
       "unnecessary"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Opportunity",
@@ -736,7 +736,7 @@
       "obstacle"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Organize",
@@ -753,7 +753,7 @@
       "disorganize"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Patient",
@@ -770,7 +770,7 @@
       "impatient"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Perform",
@@ -787,7 +787,7 @@
       "fail"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Priority",
@@ -804,7 +804,7 @@
       "triviality"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Progress",
@@ -821,7 +821,7 @@
       "decline"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Reliable",
@@ -838,7 +838,7 @@
       "unreliable"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Resolve",
@@ -855,7 +855,7 @@
       "complicate"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Responsible",
@@ -872,7 +872,7 @@
       "irresponsible"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Schedule",
@@ -887,7 +887,7 @@
     ],
     "oppositeWords": [],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Solution",
@@ -904,7 +904,7 @@
       "problem"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Specific",
@@ -922,7 +922,7 @@
       "vague"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Support",
@@ -939,7 +939,7 @@
       "oppose"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Teamwork",
@@ -956,7 +956,7 @@
       "individualism"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Unique",
@@ -974,7 +974,7 @@
       "ordinary"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Update",
@@ -991,7 +991,7 @@
       "outdate"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Valid",
@@ -1008,7 +1008,7 @@
       "invalid"
     ],
     "difficulty": "intermediate",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Value",
@@ -1025,7 +1025,7 @@
       "worthlessness"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Willing",
@@ -1042,7 +1042,7 @@
       "unwilling"
     ],
     "difficulty": "beginner",
-    "status": "draft"
+    "status": "published"
   },
   {
     "word": "Wisdom",
@@ -1059,7 +1059,7 @@
       "foolishness"
     ],
     "difficulty": "advanced",
-    "status": "draft"
+    "status": "published"
   }
 ]
 
