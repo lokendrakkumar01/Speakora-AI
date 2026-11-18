@@ -6,6 +6,7 @@ Speakora helps Hindi speakers express their own thoughts in natural English. Thi
 
 - Responsive dark learning dashboard, category navigation, learning cards, vocabulary cards, daily streak UI, and light theme toggle.
 - Browser speech playback and optional browser speech recognition for dictation. Availability depends on the browser and its installed voices.
+- Eight guided speaking prompts with sample answers, browser voice input/playback, word-count coaching, and device-local speaking history.
 - JWT registration and login, bcrypt password hashing, profile preferences, admin authorization, request validation, rate limiting, Helmet, and CORS.
 - MongoDB models and paginated APIs for topics and vocabulary; learner saved-word and practice-history endpoints.
 - AI sentence coaching, speaking prompts and corrections, and admin topic generation through a server-only OpenAI provider adapter. The API returns an explicit configuration error when `OPENAI_API_KEY` is absent.
@@ -28,7 +29,7 @@ npm run dev
 
 On PowerShell, copy the environment template with `Copy-Item .env.example .env`. Replace `<db_password>` in `MONGODB_URI` with the MongoDB database user's actual password. Set a long random `JWT_SECRET`, and optionally `OPENAI_API_KEY`. Configure `CLOUDINARY_URL` on the server from the Cloudinary Console; keep it in the ignored `.env` file. The Vite app runs on `http://localhost:5173`; the Express API runs on `http://localhost:4000`.
 
-The first registration using the address configured in `ADMIN_EMAIL` receives the admin role. Set this value before creating the intended admin account. All other users receive the learner role; a client-supplied role is never trusted.
+Only the account whose email exactly matches `ADMIN_EMAIL` receives the admin role. Set this Render environment variable to the intended admin email. Create the account from the app's **Admin sign in → Need an admin account?** flow; choose its password there. Passwords are hashed in MongoDB and must not be added as a Render environment variable. If this email already has a learner account, the next sign-in (or session check) upgrades it to admin. All other users remain learners, and the API checks the stored role before allowing question changes.
 
 ## API overview
 
