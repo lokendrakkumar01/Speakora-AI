@@ -1060,6 +1060,168 @@
     ],
     "difficulty": "advanced",
     "status": "published"
+  },
+  {
+    "difficulty": "intermediate",
+    "oppositeWords": [
+      "reject",
+      "abandon"
+    ],
+    "status": "published",
+    "definition": "to take up an idea or method",
+    "pronunciation": "uh-DOPT",
+    "word": "Adopt",
+    "example": "Our team decided to adopt a simpler workflow.",
+    "meaningHindi": "अपनाना; किसी विचार या तरीके को स्वीकार करके उपयोग करना",
+    "category": "Workplace",
+    "similarWords": [
+      "embrace",
+      "accept"
+    ]
+  },
+  {
+    "difficulty": "intermediate",
+    "oppositeWords": [
+      "retreat",
+      "regress"
+    ],
+    "status": "published",
+    "definition": "to move forward or make progress",
+    "pronunciation": "ad-VANS",
+    "word": "Advance",
+    "example": "Technology continues to advance rapidly.",
+    "meaningHindi": "आगे बढ़ना; प्रगति करना या किसी काम को आगे ले जाना",
+    "category": "Everyday English",
+    "similarWords": [
+      "progress",
+      "proceed"
+    ]
+  },
+  {
+    "difficulty": "advanced",
+    "oppositeWords": [
+      "oppose",
+      "criticize"
+    ],
+    "status": "published",
+    "definition": "to publicly support a cause or idea",
+    "pronunciation": "AD-vuh-kayt",
+    "word": "Advocate",
+    "example": "Many teachers advocate practical learning.",
+    "meaningHindi": "समर्थन करना; किसी विचार या कारण के पक्ष में बोलना",
+    "category": "Communication",
+    "similarWords": [
+      "support",
+      "promote"
+    ]
+  },
+  {
+    "difficulty": "intermediate",
+    "oppositeWords": [
+      "unmotivated",
+      "aimless"
+    ],
+    "status": "published",
+    "definition": "having a strong desire to achieve success",
+    "pronunciation": "am-BISH-us",
+    "word": "Ambitious",
+    "example": "She is ambitious and wants to build her own company.",
+    "meaningHindi": "महत्वाकांक्षी; बड़े लक्ष्य पाने की इच्छा रखने वाला",
+    "category": "Personal Qualities",
+    "similarWords": [
+      "driven",
+      "aspiring"
+    ]
+  },
+  {
+    "difficulty": "intermediate",
+    "oppositeWords": [
+      "overlook",
+      "ignore"
+    ],
+    "status": "published",
+    "definition": "to examine something carefully",
+    "pronunciation": "AN-uh-lyze",
+    "word": "Analyze",
+    "example": "Analyze the data before making a conclusion.",
+    "meaningHindi": "विश्लेषण करना; किसी चीज़ को विस्तार से जाँचना",
+    "category": "Critical Thinking",
+    "similarWords": [
+      "examine",
+      "assess"
+    ]
+  },
+  {
+    "difficulty": "intermediate",
+    "oppositeWords": [
+      "calm",
+      "relaxed"
+    ],
+    "status": "published",
+    "definition": "worried or nervous about something",
+    "pronunciation": "ANGK-shus",
+    "word": "Anxious",
+    "example": "I felt anxious before my first interview.",
+    "meaningHindi": "चिंतित; किसी बात को लेकर बेचैन या परेशान",
+    "category": "Emotions",
+    "similarWords": [
+      "worried",
+      "nervous"
+    ]
+  },
+  {
+    "difficulty": "intermediate",
+    "oppositeWords": [
+      "accuse",
+      "blame"
+    ],
+    "status": "published",
+    "definition": "to express regret for a mistake",
+    "pronunciation": "uh-POL-uh-jyze",
+    "word": "Apologize",
+    "example": "You should apologize if your words hurt someone.",
+    "meaningHindi": "माफी माँगना; गलती के लिए खेद व्यक्त करना",
+    "category": "Communication",
+    "similarWords": [
+      "say sorry",
+      "express regret"
+    ]
+  },
+  {
+    "difficulty": "advanced",
+    "oppositeWords": [
+      "passive",
+      "submissive"
+    ],
+    "status": "published",
+    "definition": "confident in expressing opinions respectfully",
+    "pronunciation": "uh-SUR-tiv",
+    "word": "Assertive",
+    "example": "Be assertive while explaining your point of view.",
+    "meaningHindi": "आत्मविश्वास से अपनी बात रखने वाला; स्पष्ट और दृढ़",
+    "category": "Communication",
+    "similarWords": [
+      "confident",
+      "self-assured"
+    ]
+  },
+  {
+    "difficulty": "intermediate",
+    "oppositeWords": [
+      "verify",
+      "question"
+    ],
+    "status": "published",
+    "definition": "to believe something without proof",
+    "pronunciation": "uh-SOOM",
+    "word": "Assume",
+    "example": "Do not assume that everyone understands the instructions.",
+    "meaningHindi": "मान लेना; बिना पुष्टि के किसी बात को सच समझना",
+    "category": "Critical Thinking",
+    "similarWords": [
+      "suppose",
+      "presume"
+    ]
   }
 ]
 
