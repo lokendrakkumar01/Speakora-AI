@@ -10,8 +10,11 @@ Speakora helps Hindi speakers express their own thoughts in natural English. Thi
 - MongoDB models and paginated APIs for topics and vocabulary; learner saved-word and practice-history endpoints.
 - AI sentence coaching, speaking prompts and corrections, and admin topic generation through a server-only OpenAI provider adapter. The API returns an explicit configuration error when `OPENAI_API_KEY` is absent.
 - Draft/review/published topic workflow and admin topic CRUD. Only published topics and vocabulary are returned from learner endpoints.
+- GATE practice area with 2009–2026 year selection, 30 current paper choices, shared General Aptitude filtering, MCQ/MSQ/NAT metadata, paginated verified questions, answer/solution reveal, and an admin question editor with draft review, publish/delete, and JSON batch import.
 
 The dashboard contains presentational learning examples while the API is being configured. AI-generated results, saved content, and personalized progress are served by the API and are not silently simulated. Media uploads, password recovery email, generated PDF exports, and hosted avatar/video generation still need deployment credentials and provider services before they can be enabled.
+
+The GATE bank starts empty; question records require an admin import or entry, including the verified answer, worked solution, and source. The official [GATE 2026 download archive](https://gate2026.iitg.ac.in/download.html) links bulk previous-year papers for 2007–2025 and year-wise papers for 2021–2025. GATE 2026 master papers and answer keys are listed separately on the [official 2026 paper/key page](https://gate2026.iitg.ac.in/QPs-answer-keys.html). Official keys provide answers, not necessarily step-by-step worked explanations. Import only content you are permitted to republish; do not treat a question as verified without checking its official key.
 
 ## Local development
 
@@ -34,12 +37,16 @@ The first registration using the address configured in `ADMIN_EMAIL` receives th
 | POST | `/api/auth/register`, `/api/auth/login` | Public | Create account / issue token |
 | GET | `/api/auth/me`, `/api/progress` | Signed in | Current user and practice summary |
 | PATCH | `/api/profile` | Signed in | Update name, interests, avatar preference |
-| GET | `/api/topics`, `/api/vocabulary` | Public | Paginated published content |
+| GET | `/api/topics`, `/api/vocabulary`, `/api/gate/questions` | Public | Paginated published content and GATE questions |
+| GET | `/api/gate/questions/:id/solution` | Public | Verified answer and worked solution for a published question |
 | POST | `/api/learn/sentence` | Signed in + AI key | Hindi/English sentence coaching |
 | POST | `/api/learn/speaking-prompt`, `/api/learn/correct` | Signed in + AI key | Speaking practice |
 | POST/PATCH/DELETE | `/api/admin/topics` | Admin | Create, review, publish, edit, archive or delete topics |
 | POST | `/api/admin/topics/generate` | Admin + AI key | Generate an editable topic draft |
 | POST | `/api/admin/vocabulary` | Admin | Create vocabulary |
+| GET/POST | `/api/admin/gate/questions` | Admin | Review question bank and create a question draft |
+| POST | `/api/admin/gate/questions/import` | Admin | Import up to 250 question objects from JSON as drafts |
+| PATCH/DELETE | `/api/admin/gate/questions/:id` | Admin | Publish, edit, archive, or delete a question |
 
 Send the JWT as `Authorization: Bearer <token>`. All AI calls are made by the server; keys must never be put in Vite variables or browser code.
 
@@ -47,7 +54,7 @@ Send the JWT as `Authorization: Bearer <token>`. All AI calls are made by the se
 
 ### API on Render
 
-Create a Web Service from this repository. Use `npm install` as the build command and `npm start` as the start command. Configure `MONGODB_URI`, `JWT_SECRET`, `ADMIN_EMAIL`, `CLIENT_ORIGIN`, and (if wanted) `OPENAI_API_KEY` and `OPENAI_MODEL` in the Render environment. Restrict Atlas network access to the service's network policy where possible.
+Create a Web Service from this repository. Use `npm install && npm run build:server` as the build command and `npm start` as the start command. Configure `MONGODB_URI`, `JWT_SECRET`, `ADMIN_EMAIL`, `CLIENT_ORIGIN`, and (if wanted) `OPENAI_API_KEY` and `OPENAI_MODEL` in the Render environment. Restrict Atlas network access to the service's network policy where possible.
 
 ### Frontend on Vercel or Render Static Site
 
