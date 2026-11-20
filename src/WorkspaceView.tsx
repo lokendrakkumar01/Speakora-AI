@@ -5,7 +5,7 @@ import { apiUrl } from './api';
 
 type Phrase = { word: string; meaning: string; use: string; type: string };
 type Lesson = { icon: string; title: string; tag: string; time: string; color: string; desc: string };
-const fetchWithTimeout=(url:string,init:RequestInit={},timeoutMs=60000)=>{const controller=new AbortController();const timeout=window.setTimeout(()=>controller.abort(),timeoutMs);return fetch(url,{...init,signal:controller.signal}).finally(()=>window.clearTimeout(timeout))};
+const fetchWithTimeout=(url:string,init:RequestInit={},timeoutMs=20000)=>{const controller=new AbortController();const timeout=window.setTimeout(()=>controller.abort(),timeoutMs);return fetch(url,{...init,signal:controller.signal}).finally(()=>window.clearTimeout(timeout))};
 const speakingPrompts = [
   { topic: 'Introduce yourself', category:'Daily Life', level:'beginner', question: 'Tell me about yourself and one thing you enjoy learning.', sample: 'My name is Asha. I work as a designer, and I enjoy learning how people use technology. In my free time, I like reading and spending time with my family.', tip: 'Use your name, one detail about work or study, and one personal interest.' },
   { topic: 'Daily routine', category:'Daily Life', level:'beginner', question: 'Describe a typical day in your life.', sample: 'I usually start my day with breakfast and a short walk. I work in the morning, take a break in the afternoon, and spend the evening with my family.', tip: 'Use sequence words such as usually, then, after that, and finally.' },
@@ -82,7 +82,7 @@ export default function WorkspaceView({ active, search, phrases, lessons, saved,
   useEffect(()=>()=>{window.clearTimeout(liveTimer.current);window.clearTimeout(samplePlaybackTimer.current)},[]);
   useEffect(() => {
     if (active !== 'Media library') return;
-    let cancelled = false;const controller=new AbortController();const timeout=window.setTimeout(()=>controller.abort(),60000);setMediaLoading(true); setMediaError('');
+    let cancelled = false;const controller=new AbortController();const timeout=window.setTimeout(()=>controller.abort(),20000);setMediaLoading(true); setMediaError('');
     fetch(apiUrl('/api/media'),{signal:controller.signal}).then(async r=>{const d=await r.json();if(!r.ok)throw new Error(d.error||'Could not load media.');if(!cancelled)setMediaItems(Array.isArray(d.items)?d.items:[]);}).catch((e:any)=>{if(!cancelled){setMediaItems([]);setMediaError(e.name==='AbortError'?'The server took too long to respond. It may be waking up; retry in a moment.':e.message||'Could not load media.');}}).finally(()=>{window.clearTimeout(timeout);if(!cancelled)setMediaLoading(false)});
     return()=>{cancelled=true;window.clearTimeout(timeout);controller.abort()};
   },[active,mediaAttempt]);
