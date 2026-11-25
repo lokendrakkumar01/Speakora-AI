@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Bookmark, Download, ExternalLink, FileText, Image as ImageIcon, Link, LoaderCircle, Mic, MicOff, Play, RotateCcw, Sparkles, Trash2, Volume2, X } from 'lucide-react';
 import { apiUrl } from './api';
 import SpeakingIntroduction from './SpeakingIntroduction';
+import SpeakingPractice from './SpeakingPractice';
 
 type Phrase = { word: string; meaning: string; use: string; type: string };
 type Lesson = { icon: string; title: string; tag: string; time: string; color: string; desc: string };
@@ -149,6 +150,8 @@ export default function WorkspaceView({ active, search, phrases, lessons, saved,
       {previewImage&&<div className="media-lightbox" role="dialog" aria-modal="true" aria-label={previewImage.title} onClick={()=>setPreviewImage(null)}><button type="button" className="media-lightbox-close" onClick={()=>setPreviewImage(null)} aria-label="Close photo preview"><X size={20}/></button><img src={previewImage.url} alt={previewImage.title} onClick={event=>event.stopPropagation()}/><p>{previewImage.title}</p></div>}
     </>:<div className="gate-empty"><ImageIcon size={28}/><h3>No learning media yet</h3><p>Resources published by the Speakora admin will appear here.</p><button className="secondary-btn" onClick={()=>setMediaAttempt(value=>value+1)}>Refresh library</button></div>}
   </section>;
+  if (active === 'Speaking practice') return <SpeakingPractice token={token} notify={notify} speak={speak} startMic={startMic} stopMic={stopMic} onLogin={onLogin}/>;
+
   if (active === 'Speaking practice') {
     const categories=Array.from(new Set(['Daily Life','HR Interview','Technical Interview','GD','Professional Communication','Engineering Student Conversation','Project Explanation','Self Introduction',...promptItems.map(item=>String(item.category||'').trim()).filter(Boolean)]));
     const visiblePrompts=promptItems.filter(item=>(item.category||'Daily Life').toLowerCase()===speakingCategory.toLowerCase());
