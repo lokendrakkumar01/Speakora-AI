@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight, Download, FileUp, Link, LoaderCircle, Pencil, Plus, RefreshCw, Search, ShieldCheck, Sparkles, Trash2, Upload, X } from 'lucide-react';
+import { ArrowRight, Bot, Download, FileUp, Link, LoaderCircle, Pencil, Plus, RefreshCw, Search, ShieldCheck, Sparkles, Trash2, Upload, X } from 'lucide-react';
 import { apiUrl } from './api';
 
 type ContentItem = Record<string, any> & { _id?: string; title?: string; word?: string; topic?: string; status?: string };
@@ -47,6 +47,7 @@ export default function AdminDashboard({ token, notify, onOpenGate }: { token: s
   const [importing, setImporting] = useState(false);
   const [aiGenerating, setAiGenerating] = useState(false);
   const [syncingMedia, setSyncingMedia] = useState(false);
+  const [aiStatus,setAiStatus]=useState<any>(null);
   const endpoint = section === 'lessons' ? '/api/admin/topics' : section === 'vocabulary' ? '/api/admin/vocabulary' : section === 'speaking' ? '/api/admin/practice-prompts' : '/api/admin/media';
   const emptyForm = () => section === 'lessons' ? emptyTopic : section === 'vocabulary' ? emptyWord : section === 'speaking' ? emptyPrompt : emptyMedia;
   const categoryChoices = section === 'media' ? [] : categoriesBySection[section];
@@ -60,6 +61,7 @@ export default function AdminDashboard({ token, notify, onOpenGate }: { token: s
     finally { setLoading(false); }
   };
   useEffect(() => { setItems([]); setForm(emptyForm()); setEditing(''); void load(); }, [section, token]);
+  useEffect(()=>{let alive=true;const loadStatus=async()=>{try{const response=await fetch(apiUrl('/api/ai/status'),{headers:{Authorization:`Bearer ${token}`}});const data=await response.json();if(alive)setAiStatus(data)}catch{if(alive)setAiStatus({configured:false,provider:'unreachable',database:'unreachable'})}};void loadStatus();const timer=window.setInterval(loadStatus,60000);return()=>{alive=false;window.clearInterval(timer)}},[token]);
 
   const save = async (e: React.FormEvent) => {
     e.preventDefault(); setLoading(true); setError('');
@@ -134,7 +136,7 @@ export default function AdminDashboard({ token, notify, onOpenGate }: { token: s
     return (!filter || `${label} ${detail}`.includes(filter.toLowerCase())) && (statusFilter === 'all' || (item.status || 'draft') === statusFilter);
   });
   const publishedCount = items.filter(item => item.status === 'published').length;
-  return <section className="admin-dashboard"><div className="section-heading"><div><div className="section-kicker"><ShieldCheck size={13}/> ADMIN WORKSPACE</div><h2>Manage Speakora content</h2><p>Build, review, publish, and maintain the content learners use.</p></div><div className="admin-header-actions"><button className="secondary-btn" onClick={onOpenGate}>GATE question bank <ArrowRight size={14}/></button><button className="secondary-btn" onClick={()=>void load()} disabled={loading}><RefreshCw size={14}/> Refresh</button></div></div>
+  return <section className="admin-dashboard"><div className="section-heading"><div><div className="section-kicker"><ShieldCheck size={13}/> ADMIN WORKSPACE</div><h2>Manage Speakora content</h2><p>Build, review, publish, archive, and maintain the content learners use.</p></div><div className="admin-header-actions"><button className="secondary-btn" onClick={onOpenGate}>GATE question bank <ArrowRight size={14}/></button><button className="secondary-btn" onClick={()=>void load()} disabled={loading}><RefreshCw size={14}/> Refresh</button></div></div><div className={`admin-ai-health ${aiStatus?.upstream==='healthy'&&aiStatus?.database==='connected'?'ready':'warning'}`}><Bot size={17}/><div><b>AI provider {aiStatus?.upstream==='healthy'?'reachable':aiStatus?.upstream==='failed'?'connection failed':aiStatus?.configured?'configured':'not configured'}</b><span>{aiStatus?`${aiStatus.provider} · ${aiStatus.model||'model unknown'} · database ${aiStatus.database}`:'Checking backend and AI configuration…'}</span></div><button className="secondary-btn" onClick={()=>fetch(apiUrl('/api/ai/status'),{headers:{Authorization:`Bearer ${token}`}}).then(r=>r.json()).then(setAiStatus).catch(()=>setAiStatus({configured:false,provider:'unreachable',database:'unreachable'}))}><RefreshCw size={13}/> Check now</button></div>
     <div className="admin-metrics"><div><b>{items.length}</b><span>Total {section==='lessons'?'lessons':section==='vocabulary'?'words':section==='speaking'?'prompts':'items'}</span></div><div><b>{publishedCount}</b><span>Published</span></div><div><b>{items.length-publishedCount}</b><span>Draft or archived</span></div><div><b>{section==='media'?'Cloudinary':'MongoDB'}</b><span>Content storage</span></div></div>
     <div className="admin-tabs">{tabs.map(([key,label])=><button key={key} className={`secondary-btn ${section===key?'active':''}`} onClick={()=>setSection(key)}>{label}</button>)}</div>
     {section!=='media'&&<div className="admin-tools"><label className="admin-search"><Search size={15}/><input value={filter} onChange={e=>setFilter(e.target.value)} placeholder={`Search ${section}…`}/></label><select value={statusFilter} onChange={e=>setStatusFilter(e.target.value)} aria-label="Filter content by status"><option value="all">All statuses</option><option value="draft">Draft</option><option value="published">Published</option><option value="archived">Archived</option><option value="pending-review">Pending review</option></select><button className="secondary-btn" onClick={()=>setShowImport(x=>!x)}><Upload size={14}/> Import JSON</button><button className="secondary-btn" onClick={exportItems} disabled={!items.length}><Download size={14}/> Export</button></div>}
