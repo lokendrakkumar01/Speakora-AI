@@ -18,7 +18,7 @@ services:
       - key: CLOUDINARY_CLOUD_NAME
         value: dc6yyzex4
       - key: CLIENT_ORIGIN
-        sync: false
+        value: https://speakora-ai-3s3a.onrender.com
       - key: ADMIN_EMAIL
         sync: false
       - key: OPENAI_API_KEY
@@ -37,7 +37,7 @@ services:
     staticPublishPath: dist
     envVars:
       - key: VITE_API_URL
-        sync: false
+        value: https://speakora-ai-backend-ypyx.onrender.com
     routes:
       - type: rewrite
         source: /*
